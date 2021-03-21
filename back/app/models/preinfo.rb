@@ -1,0 +1,2 @@
+class Preinfo < ApplicationRecord
+end
