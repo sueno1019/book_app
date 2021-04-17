@@ -1,17 +1,14 @@
 <template>
   <div>
-    <Header class="header"></Header>
     <BookIndex class="main"></BookIndex>
   </div>
 </template>
 
 <script>
-import Header from '../components/Header' 
-import BookIndex from "../components/BookIndex"
+import BookIndex from '../components/Book/BookIndex'
 
 export default {
   components: {
-    Header,
     BookIndex
   }
 }
@@ -20,7 +17,7 @@ export default {
 <style scoped>
 .main{
   width:100%;
-  background-color: #a7d7c5;
+  background-color: #4ea08e;
 }
 .header{
    background-color: #757575;
