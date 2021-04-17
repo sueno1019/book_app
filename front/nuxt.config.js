@@ -64,6 +64,9 @@ export default {
       }
     }
   },
+  css: [
+    '@/assets/style/reset.css'
+  ],
   /*
   ** Build configuration
   */

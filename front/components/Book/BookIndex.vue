@@ -1,5 +1,8 @@
 <template>
     <div class="main-content">
+      <div class="button-for-modal">
+        <ModalButton>new book</ModalButton>
+      </div>
       <div class="wrapper">
         <ul class="list">
           <transition-group >
@@ -15,6 +18,7 @@
 <script>
 import axios from '@/plugins/axios.js'
 import BookList from './BookList'
+// import ModalButton from './Button'
 
 export default {
   data: function () {
@@ -23,7 +27,8 @@ export default {
     }
   },
   components: {
-    BookList
+    BookList,
+   // ModalButton
   },
   mounted () {
     axios
@@ -51,5 +56,11 @@ export default {
 .list{
   text-align: left;
   max-width: 100%;
+}
+.button-for-modal{
+  position: absolute;
+  top: 60px;
+  right: 210px;
+
 }
 </style>

@@ -13,6 +13,7 @@ class Api::V1::BooksController < ApplicationController
     def create
       book = Book.new(book_params)
       if book.save
+        book.eyecatch = book_params[:image]
         render json: book, status: :created
       else
         render json: { errors: book.errors.full_messages }, status: :unprocessable_entity
