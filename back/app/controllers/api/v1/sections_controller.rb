@@ -1,11 +1,11 @@
 class Api::V1::SectionsController < ApplicationController
-    before_action :set_section, only: [:show]
+    before_action :set_section, only: [:index]
   
     rescue_from ActiveRecord::RecordNotFound do |exception|
       render json: { error: '404 not found' }, status: 404
     end
 
-    def show
+    def index
       render json:  @section 
     end
   

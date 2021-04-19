@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
-  validate　:title, presence: true, uniqueness: true, length: {maximum: 50}
-  validate　:author, presence: true, length: {maximum: 50}
+  validates :title, presence: true, uniqueness: true, length: {maximum: 50}
+  validates :author, presence: true, length: {maximum: 50}
 
   has_one_attached :eyecatch
   attr_accessor :image
