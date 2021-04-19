@@ -1,6 +1,6 @@
 <template>
     <li class="list">
-        <NuxtLink  :to="{name: 'section', params: {id: bookItem.id}}">
+        <NuxtLink  :to="{name: 'book-id', params: {id: bookItem.id}}">
             <div class="list-container">
                 <img class="book-pic">
                 <div class="book-info">

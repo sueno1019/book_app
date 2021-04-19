@@ -1,18 +1,18 @@
 <template>
-    <v-app>
-        <div class="n-btn">
-    <v-btn
+  <v-app>
+    <div class="n-btn">
+      <v-btn
       class="ma-2"
       large
       fab
       color="secondary"
       @click="showModal=true"
-    >
-      <v-icon>mdi-pencil</v-icon>
-    </v-btn>
-            <BookModal v-if="showModal" @close="showModal=false" />
-        </div>
-    </v-app>
+      >
+        <v-icon>mdi-pencil</v-icon>
+      </v-btn>
+      <BookModal v-if="showModal" @close="showModal=false" />
+    </div>
+  </v-app>
 </template>
 
 <script>
