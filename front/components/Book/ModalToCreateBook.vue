@@ -3,7 +3,7 @@
         <div class="overlay" @click="$emit('close')">
             <div class="panel" @click.stop>
                 <div class="modal-content">
-                    <p>これがモーダルウィンドウです</p>
+                    <p>桐木です</p>
                     <p>いいね({{number}})</p>
                     <button @click="$emit('close')">閉じる</button>
                 </div>
