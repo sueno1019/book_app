@@ -4,7 +4,7 @@
             <div class="panel" @click.stop>
                 <div class="modal-content">
                     <p>桐木です</p>
-                    <p>いいね({{number}})</p>
+                    <p>悪いね({{number}})</p>
                     <button @click="$emit('close')">閉じる</button>
                 </div>
             </div>
