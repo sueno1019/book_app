@@ -9,6 +9,9 @@
                     </div>
                     <div class=book-author>
                         著者: {{bookItem.author}}{{bookItem.image}}
+                    </div>
+                    <div class=book-sum>
+                        {{bookItem.book_sum}}
                     </div>           
                 </div>    
             </div>
@@ -28,7 +31,7 @@ export default {
     },
     data: function(){
         return{
-            // img_src: bookItem.title
+            //  img_src: bookItem.title
         }
     }
 }
@@ -67,6 +70,10 @@ a{
 .book-author{
     margin-top: 40px;
     font-size: 25px;
+}
+.book-sum{
+    margin-top: 40px;
+    font-size: 15px;
 }
 .list-container{
     width: 100%;
