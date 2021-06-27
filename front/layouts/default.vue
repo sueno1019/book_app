@@ -1,11 +1,11 @@
 <template>
   <v-app dark>
-    <v-content>
+    <v-main>
       <v-container fluid>
         <Header/>
         <nuxt class="main" />
       </v-container>
-    </v-content>
+    </v-main>
     <v-footer
       :fixed="fixed"
       app

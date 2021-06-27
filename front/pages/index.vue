@@ -37,7 +37,7 @@ export default {
   },
 }
 </script>
-#4ea08e
+
 <style scoped>
 .main-content{
   display: flex;
