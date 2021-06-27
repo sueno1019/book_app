@@ -3,9 +3,16 @@
         <div class="overlay" @click="$emit('close')">
             <div class="panel" @click.stop>
                 <div class="modal-content">
-                    <p>桐木です</p>
-                    <p>悪いね({{number}})</p>
-                    <button @click="$emit('close')">閉じる</button>
+                    <div class="sum">
+                        <span>要約:</span>
+                        <br>
+                        <textarea v-model="message" placeholder="ここにDBに登録され散る内容が編集不可で表示される感じ？"></textarea>
+                            <div class="nav">
+                                <v-btn color="light-green" elevation="10" class="fix">fix</v-btn>
+                                <v-btn color="light-green" elevation="10" class="login" @click="$emit('close')">close</v-btn>
+                            </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -14,18 +21,14 @@
 
 <script>
 export default {
-    data(){
-        return{
-            number:5
-        }
-    }
+    
 }
 </script>
 
 
 <style lang="scss">
 .overlay {//モーダル以外の箇所
-    background: rgba(5, 5, 5, 0.8);//第4引数は透明度
+    background: rgba(5, 5, 5, 0.3);//第4引数は透明度
     position: fixed;
     width: 100%;
     height: 100%;
@@ -39,19 +42,37 @@ export default {
 .panel {//モーダル箇所
     width: 1200px;
     height: 630px;
-    background:rgb(255,255,255,0.9);
+    background:#324851;
     padding: 20px;
     position: absolute;
     left: 18%;
     top: 24%;
     margin-left: -150px;
     margin-top: -100px;
-    transition: all .3s ease;
     z-index: 2;
+    border-radius: 30px;
 }
-.modal-content{
+.sum{
+    height: 600px;
+    z-index: 3;
+    font-size: 1rem;
+    color: white;
 }
 
+.nav{
+    margin: 17px 20px;
+    float: right;
+}
+.fix{
+    margin-right: 10px;
+}
+
+textarea{
+    border-style: double;
+    color: white;
+    width: 90%;
+    height: 20%;
+}
 
 .modal-enter,
 .modal-leave-active {
