@@ -2,7 +2,7 @@
     <div class="main-content">
       <div class="button-for-modal">
         <ModalButton>new book</ModalButton>
-      </div>
+      </div> 
       <List>
         <template v-slot:list>
           <BookList v-for="book in books" :key="book.id" :book-item="book" />
@@ -16,6 +16,7 @@ import axios from '@/plugins/axios.js'
 import BookList from '@/components/Book/BookList.vue'
 import ModalButton from '@/components/Book/Button.vue'
 import List from '@/components/common/List.vue'
+import Button from '../components/Book/Button.vue'
 
 export default {
   data: function () {
@@ -26,7 +27,8 @@ export default {
   components: {
     BookList,
     ModalButton,
-    List
+    List,
+    Button
   },
   mounted () {
     axios
@@ -40,7 +42,7 @@ export default {
 .main-content{
   display: flex;
   width:100%;
-  padding-top:50px;
+  padding-top:80px;
   margin: 0 auto;
   background-color: #a7d7c5;
   align-items: stretch;

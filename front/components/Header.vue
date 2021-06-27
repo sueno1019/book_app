@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" aria-posinset="">
     <div class="logo">
       logo
     </div>
@@ -18,6 +18,8 @@
 //     Button
 //   }
 // }
+
+
 </script>
 
 <style  scoped>
@@ -27,12 +29,14 @@
   top: 20px;
 }
 .header{
+  z-index:2;
+  position: fixed;
   width: 100%;
   height: 80px;  
   background-color: #324851;
 }
 .nav{
-  margin: 17px 20px;  
+  margin: 17px 20px;
   float: right;
 }
 .login{

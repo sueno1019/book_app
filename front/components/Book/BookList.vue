@@ -2,13 +2,19 @@
     <li class="list">
         <NuxtLink  :to="{name: 'book-id', params: {id: bookItem.id}}">
             <div class="list-container">
-                <img class="book-pic">
+                <div class="book-pic">
+                    <!-- <img src="/images/1.jpg" class="width"> -->
+                    <img :src='img_src' class="width">
+                </div>
                 <div class="book-info">
                     <div class="book-title">
                         {{bookItem.title}}
                     </div>
                     <div class=book-author>
-                        著者: {{bookItem.author}}{{bookItem.image}}
+                        著者: {{bookItem.author}}
+                    </div>
+                    <div class=book-sum>
+                        {{bookItem.book_sum}}
                     </div>           
                 </div>    
             </div>
@@ -28,7 +34,7 @@ export default {
     },
     data: function(){
         return{
-            // img_src: bookItem.title
+            img_src: `/images/${this.bookItem.image}`
         }
     }
 }
@@ -68,6 +74,10 @@ a{
     margin-top: 40px;
     font-size: 25px;
 }
+.book-sum{
+    margin-top: 40px;
+    font-size: 15px;
+}
 .list-container{
     width: 100%;
     height: 100%;
@@ -77,5 +87,9 @@ a{
     height: 265px;
     width: 976px;
     padding: 30px;
+}
+
+.width {
+  width: 100%;
 }
 </style>

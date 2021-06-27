@@ -14,11 +14,11 @@
           color="secondary"
           @click="addSection()"
         >
-          <v-icon dark>
+        <v-icon dark>
             mdi-plus
-          </v-icon>
+        </v-icon>
         </v-btn>
-    </div>    
+    </div>
 </template>
 <script>
 import axios from '@/plugins/axios.js'
