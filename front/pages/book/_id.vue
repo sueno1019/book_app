@@ -1,5 +1,8 @@
 <template>
     <div class="main-content">
+      <div class="book-name">
+        {{}}
+      </div>
       <ul>
         <List>
           <template v-slot:list>
@@ -37,7 +40,11 @@ export default {
   },
   computed: {
     addSection: function(){
-      
+      axios
+        .post('/api/v1/sections.json', {
+          params: {section: {book_id: this.$route.params.id, sec_num: this.sections.length + 1}}
+        })
+        .then(console.log(response))
     }
   },
   mounted () {
